@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous"> <!-- CDN for bootstrap-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" /> <!-- CDN for fontawesome-->
+      
+        <!-- font for japanese text /header -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,300;1,400;1,700&family=M+PLUS+Rounded+1c&family=Sawarabi+Gothic&display=swap" rel="stylesheet">
+        
+          <!-- fade in animation css -->
+        <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+        <link rel="stylesheet" href="./style.css">
+
+        <!-- favicon -->
+        <link rel="icon" type="image/x-icon" href="./images/favicon.ico">
+      
+    </head>
+
+    <title>About Us</title>
+
+    <style>
+        /* Customize header container */
+        .header-container {
+            align-items: start;
+            display: flex;
+        }
+
+        .textpadding{
+            font-size: 15px;
+            margin-top: 20px;
+            margin-left: 30px;
+            font-family: 'Sawarabi Gothic', sans-serif;
+        }
+
+        /* for adjusting location icon */
+        .location-icon-padding{
+            position: relative;
+            left: 30px;
+            margin-top: 30px; 
+        }
+
+
+        /* for adjusting right-icon */
+        .icon-padding{
+            position: relative;
+            left: 90px;
+            margin-top: 40px; 
+            margin-right: 10px;
+        }
+
+        .middle-logo{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .container{
+            padding:2% 1%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            
+        }
+
+        .vision-container{
+            text-align: center;
+            padding-top: 20vw;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            /* The image used */
+            background-image: url("images/vision-banner.jpg");
+
+            /* Set a specific height */
+            min-height: 100%; 
+
+            /* Create the parallax scrolling effect */
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            z-index: -1;
+            width:100%;
+            
+        }
+
+        .awards-container{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 1vw;
+        }
+
+        .awards-container img{
+            width: 30%;
+        }
+
+        .chef-container{
+            /* The image used */
+            background-image: url("images/Chef.jpg");
+           
+            /* Set a specific height */
+            min-height: 100%; 
+
+            /* Create the parallax scrolling effect */
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size:cover;
+
+            position: absolute;
+
+            top: 130vw;
+            left: 0px;
+            z-index: -1;
+            width: 100%;
+
+            text-align: start;
+        }
+
+        .text-overlay p {
+        font-size: 15px;
+        color: white; /* Adjust the text color */
+        font-family: 'M PLUS Rounded 1c', sans-serif;
+        }
+        .text-overlay h3 {
+            font-size:23px;
+            color: peachpuff; /* Adjust the text color */
+            font-family: 'M PLUS Rounded 1c', sans-serif;
+        }
+
+        .footer-container{
+        padding-top: 53vw;
+        padding-left:2vw;
+        display:flex;
+        align-items: center;
+        justify-content: space-between;
+        max-width: 1200px;
+        margin: 0 auto;
+        }
+
+        .thick-line{
+        display: flex;
+        flex-direction: column;
+        width: 30%;
+        height: 3px; /* Adjust the thickness of the line */
+        background-color: peachpuff; /* Adjust the line color */
+        
+        }
+
+        .links{
+        list-style-type: none;
+        text-decoration: none;
+        font-family: "M PLUS Rounded 1c", sans-serif;
+        margin-bottom: 10px;
+        color:white;
+        font-size:20px;
+        
+        }
+
+        .custom-input {
+            background-color: grey;
+            font-family: "M PLUS Rounded 1c", sans-serif;
+            color: white;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            width: 100%;
+            margin-bottom: 10px;
+        }
+
+        /* button css */
+        .btn{
+            background:peachpuff;
+            border:2px solid peachpuff;
+            font-family:'M PLUS Rounded 1c', sans-serif; 
+            color:black;
+            padding: 12px 20px;
+            cursor: pointer;
+            transition: color 0.4s ;
+            position:relative;
+            
+        }
+
+        .btn:hover{
+            color:peachpuff;
+        }
+        .btn::before{
+        content:"";
+        position:absolute;
+        left:0;
+        top:0;
+        width:100%;
+        height:100%;
+        background:black;
+
+        z-index:-1;
+        transition: transform 2s;
+        transform-origin: 0 0;
+        transition-timing-function: cubic-bezier(0.5,1.6,0.4,0.7);
+        }
+
+        .btn1::before{
+        transform:scaleX(0);
+        }
+
+        .btn1:hover::before{
+        transform:scaleX(1);
+        }
+
+
+    </style>
+
+
+
+    <body>
+        
+        <!-- bootstrap script -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
+        <div class="header text-center">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-3">
+                        <div class="header-container">
+                            <i class="fa-solid fa-location-dot fa-beat-fade fa-sm location-icon-padding"></i>
+                            <p class="textpadding"> 190 Middle Road Fortune Centre #03-01 Level 3, Singapore 188979</p>
+                        </div>
+                    </div>
+                    <div class="col-6" style="padding-right: 50px;">
+                        <img src="./images/logo.png" alt="Logo" style="width: 10%;">
+                    </div>
+                    <div class="col-2" >
+                        <div class="header-container" style="justify-content: end;">
+                            <i class="fa-solid fa-user-pen fa-xl icon-padding"></i>
+                            <i class="fa-solid fa-bars-staggered fa-xl icon-padding"></i>
+                            <i class="fa-solid fa-phone fa-xl icon-padding"></i>
+                        </div>
+                    </div>
+                </div>
+            
+                <nav class="navbar navbar-expand-lg navbar-dark bg-transparent">
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon">
+                    </span>
+                    </button>
+                    <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                    <ul class="navbar-nav ml-auto" >
+                    <li class="nav-item active" style="padding-right: 30px;">
+                        <a class="nav-link" href="./index.html">Home<br> ホーム</a>
+                    </li>
+                    <li class="nav-item" style="padding-right: 30px;">
+                        <a class="nav-link" href="#">Menu<br>メニュー</a>
+                    </li>
+                    <li class="nav-item" style="padding-right: 30px;">
+                        <a class="nav-link" href="#">Reservation<br>ブッキング</a>
+                    </li>
+                    <li class="nav-item" style="padding-right: 30px;" >
+                        <a class="nav-link" href="./about-us.html">About us<br>会社情報</a>
+                    </li>
+                    <li class="nav-item" >
+                        <a class="nav-link" href="./contact-us.html">Contact us<br>お問い合わせ</a>
+                    </li>
+                    </ul>
+                    </div>
+                </nav>
+            </div>
+        </div>
+
+        <div class="vision-container">
+            <h2><strong>VISION</strong></h2>
+            <h2>ビジョン</h2>
+            <br>
+            <br>
+            <p style="max-width: 80%;">Celebrating Japanese culinary excellence, Izakaya Euphoria aims to be Singapore's foremost destination for authentic and innovative dining experiences. We aspire to create lasting memories, bridging tradition and innovation while captivating our guests with exceptional cuisine and hospitality.</p>
+        </div>
+
+        <div class="container" style="padding-top: 45vw;">
+            <div class="row">
+                <div class="col-6">
+                    <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active" data-bs-interval="3000">
+                                <img class="d-block w-100" src="./images/about-us-1.jpg" alt="First slide">
+                            </div>
+                            <div class="carousel-item" data-bs-interval="3000">
+                                <img class="d-block w-100" src="./images/about-us-2.jpg" alt="Second slide">
+                            </div>
+                            <div class="carousel-item" data-bs-interval="3000">
+                                <img class="d-block w-100" src="./images/about-us-3.jpg" alt="Third slide">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-5" style="text-align: right;padding-left: 5vw;">
+                    <h2><strong>ABOUT</strong></h2>
+                    <br>
+                    <p>In the year 1996, Izakaya Euphoria's journey began with a visionary founder who dared to dream big. What started as a modest venture with a small, dedicated team has since blossomed into a culinary sensation, now celebrated as one of Singapore's most cherished Japanese restaurants. Our remarkable growth story is a testament to the relentless passion of our founder, the tireless dedication of our team, and the unwavering support of our beloved community and loyal diners.</p>
+                </div>
+                <div class="col-1"><h2 style="writing-mode: vertical-lr;">について</h2></div>
+            </div>
+        </div>
+
+        <div class="container" style="padding-top: 5vw;">
+            <h2><strong>OUR AWARDS</strong></h2>
+            <br>
+            <div data-aos="fade-down" data-oas-delay="50">
+                <div class="awards-container">
+                    <img src="./images/mechelinstar.png" alt="Michelin star">
+                    <img src="./images/Best-Restaurant-Award.png" alt="Singapore top restaurant" style="width: 28%;">
+                    <img src="./images/t-dining-logo.png" alt="T Dining">
+                </div>
+            </div>
+        </div>
+
+        <div class="container" style="padding-top: 5vw;">
+                <div class="chef-container">
+                    <h2 style="padding-top: 5vw; padding-left: 5vw;"><strong>OUR CHEF</strong></h2>
+                    <h2 style="padding-left: 5vw;">料理のマエストロ</h2>
+                    <br>
+                    <p style="width: 40%; padding-left: 5vw;">Get acquainted with the culinary virtuoso behind Hachi Restaurant's exquisite Japanese cuisine. Learn about our chef's rich culinary heritage, devotion to perfection, and unwavering commitment to crafting authentic Japanese dishes that captivate the senses. Explore the essence of our culinary artistry through the lens of our esteemed chef.</p>
+                </div>
+        </div>
+
+        <div class="footer-container"> 
+            <div class="row">
+                <div class="col-3">
+                    <div data-aos="fade-down" data-aos-delay="100">
+                        <h3>Useful Links</h3>
+                        <div class="thick-line"></div>
+                            
+                        <ul class="list-unstyled">
+                            <br>
+                            <li><a class="links" href="./index.html">Home</a></li>
+                            <br>
+                            <li><a class="links"href="#">Location</a></li>
+                            <br>
+                            <li><a class="links" href="#">Menu</a></li>
+                            <br>
+                            <li><a class="links" href="./about-us.html">About Us</a></li>
+                        </ul>   
+                    </div>
+                </div>
+                
+                <div class="col-3">
+                    <div data-aos="fade-down" data-aos-delay="200">
+                        <h3>Contact us</h3>
+                            <div class="thick-line"></div>
+                            <br>
+                            
+                            <p>190 Middle Road Fortune Centre #03-01 Level 3, Singapore 188979</p>
+                            
+                            <p>+65 65478921</p>
+                            
+                            <p>izakayaeuphoria@hotmail.com</p>
+    
+                    </div>
+                </div>
+        
+                <div class="col-6" style="padding-left: 40px;">
+                    <div data-aos="fade-down" data-aos-delay="300">
+                        <div class="newsletter-form" >
+                            <h3>Subscribe Newsletter</h3>
+                            <div class="thick-line"></div>
+                            <br>
+                                <form>
+                                    <div class="form-group">
+                                        <input type="text" class="form-control custom-input" id="name" placeholder="Enter Your Name">
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="email" class="form-control custom-input" id="email" placeholder="Enter Your Email">
+                                    </div>
+                                    <button type="submit" class="btn btn1">Subscribe</button>
+                                </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container ">
+            <img src="./images/logo.png" alt="logo" style="width: 8%;padding-bottom: 8vw;padding-top: 5vw;">
+         </div>
+
+
+        
+
+    <!-- script for animation -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+    AOS.init();
+    </script>
+
+    </body>
+</html>

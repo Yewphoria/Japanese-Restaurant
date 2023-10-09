@@ -1,0 +1,36 @@
+body {
+    font-family: 'Sawarabi Gothic', sans-serif;
+    background-image: url("./images/background.png");
+    color:rgb(205, 205, 205);
+   
+
+} 
+
+/* you may not use this header for other html page  */
+
+/* Customize header styles */
+.header {
+    color: rgb(205, 205, 205);
+  background-color: transparent;
+  padding: 15px 0;
+}
+.header h1 {
+  color: rgb(205, 205, 205);
+  font-size: 36px;
+  margin: 0;
+}
+.nav-link {
+  color: rgb(205, 205, 205);
+  font-size: 18px;
+  transition: transform 0.3s ease;
+  margin-right: 20px;
+}
+
+.nav-link:hover {
+    transform: scale(1.3);
+}
+
+p{
+font-size: 20px;
+font-family: 'M PLUS Rounded 1c', sans-serif;
+}
