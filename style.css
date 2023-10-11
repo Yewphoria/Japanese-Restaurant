@@ -34,3 +34,18 @@ p{
 font-size: 20px;
 font-family: 'M PLUS Rounded 1c', sans-serif;
 }
+
+
+.page-fade-out{
+  opacity: 0;
+  transition: opacity 0.5 ease-out;
+}
+
+#reservationContent {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+#reservationContent.page-fade-out {
+  opacity: 1; /* Change to 1 for fade-in effect */
+}

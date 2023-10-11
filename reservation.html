@@ -74,7 +74,7 @@
             align-items: center;
 
             /* The image used */
-            background-image: url("images/contact-us-banner.jpeg");
+            background-image: url("images/reservation.png");
 
             /* Set a specific height */
             min-height: 100%; 
@@ -154,6 +154,9 @@
             cursor: pointer;
             transition: color 0.4s ;
             position:relative;
+            align-self: center;
+            width: 30%;
+            
             
         }
 
@@ -183,12 +186,66 @@
         transform:scaleX(1);
         }
 
-        .radio-container{
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-        }    
+        #PartySize{
+            padding: 10px;
+            font-size: 16px;
+            width: 100%;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
 
+        .form-label {
+            font-weight: bold;
+            margin-bottom: 5px;
+            display: block;
+        }
+
+
+         /* Style the date input */
+        input[type="date"] {
+            padding: 10px;
+            font-size: 16px;
+            width: 100%;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        
+
+        /* Style the date input when in focus */
+        input[type="date"]:focus {
+            border-color: #5cb3fd;
+        }
+
+        .time-slot {
+            display: inline-block;
+            width:30%;
+            padding: 10px;
+            margin: 5px;
+            border: 2px solid #ccc;
+            border-radius: 5px;
+            cursor: pointer;
+            text-align: center;
+
+        }
+        .time-slot:hover {
+            border-color: peachpuff; /* Change border color on hover */
+        }
+
+        .time-slot.selected {
+            background-color: peachpuff;
+            box-shadow: 0 0 10px white;
+            color:black;
+        }
+        .container-button{
+            width:98%;
+            display: flex;
+            justify-content: center;
+            padding-top: 5%;
+            padding-right:3%;
+        }
         .button-container {
         text-align: center;
         }
@@ -259,50 +316,68 @@
         </div>
 
         <div class="contact-us-container">
-            <h2><strong>CONTACT US</strong></h2>
-            <h2>お問い合わせ</h2>
+            <h2><strong>Reservation</strong></h2>
+            <h2>ブッキング</h2>
             <br>
             <br>
-            <p style="max-width: 80%;">For urgent assistance and same day reservation, call us at +65 6547 8921 between 11:00AM - 10:00PM. <br> For non reservation enquiries or feedback, please leave us a message using the form below at or email us at izakayaeuphoria@hotmail.com</p>
+            <p style="max-width: 80%;">We serve dinner everyday from 7:00PM till 11:00PM.
+                <br>
+                To secure your reservation, a deposit is required.
+                <br>
+                To reschedule or cancel, Please contact us directly at izakayaeuphoria@hotmail.com
+            </p>
         </div>
 
         <div class="container" style="padding-top: 46vw;">
-            <h2><strong>FEEDBACK FORM</strong></h2>
-            <p>We would love to hear your thoughts, suggestions, concerns, or problems with anything so we can improve!</p>
+            <h2><strong>Make Your Reservation With Us Now</strong></h2>
+            <p style="width:70%;">Restaurants reserve the right to turn away guests who fail to comply with prevailing dine-in regulations.</p>
             <br>
             
             <form style="width: 60%;">
-                <div style="text-align: left;">
-                    <p>Feedback Type:</p>   
-                </div>
-                <div class="radio-container">
-                    <div>
-                        <input type="radio" id="comments" name="feedback" value="comments">
-                        <label for="comments">Comments</label><br>    
+            
+               
+                    <div class="row">
+                        <div class="col">
+                          <!-- Name input -->
+                            <div class="form-outline">
+                            <label class="form-label" for="form8Example1">Party Size</label>
+                            <select id="PartySize">
+                                <option value="1 adult">1 Adult(s)</option>
+                                <option value="2 adult">2 Adult(s)</option>
+                                <option value="3 adult">3 Adult(s)</option>
+                                <option value="4 adult">4 Adult(s)</option>
+                                <option value="5 adult">5 Adult(s)</option>
+                                <option value="6 adult">6 Adult(s)</option>
+                            </select>
+                            </div>
+                        </div>
+                         <div class="col">
+                            <div class="form-outline">
+                                <label class="form-label" for="form8Example1">Dinning Date</label>
+                                <input type="date">
+                            </div>
+                        </div>
+                            
+                            <h2 style="text-align: center; padding-top:3%;">Select a Time Slot</h2>
+
+                            <div class="time-slots">
+                                <div class="time-slot" onclick="toggleTimeSlot(this)">17:30</div>
+                                <div class="time-slot" onclick="toggleTimeSlot(this)">18:00</div>
+                                <div class="time-slot" onclick="toggleTimeSlot(this)">18:30</div>
+                                <div class="time-slot" onclick="toggleTimeSlot(this)">19:00</div>
+                                <div class="time-slot" onclick="toggleTimeSlot(this)">19:30</div>
+                                <div class="time-slot" onclick="toggleTimeSlot(this)">20:00</div>
+                                <div class="time-slot" onclick="toggleTimeSlot(this)">20:30</div>
+                                <div class="time-slot" onclick="toggleTimeSlot(this)">21:00</div>
+                                <div class="time-slot" onclick="toggleTimeSlot(this)">21:30</div>
+                                <div class="time-slot" onclick="toggleTimeSlot(this)">22:00</div>
+                                <div class="time-slot" onclick="toggleTimeSlot(this)">22:30</div>
+                                <div class="time-slot" onclick="toggleTimeSlot(this)">23:00</div>
+                            </div>
+                        <div class="container-button">
+                            <button type="submit" class="btn btn1">Submit</button>
+                        </div>
                     </div>
-                    <div>
-                        <input type="radio" id="suggestions" name="feedback" value="suggestions" >
-                        <label for="suggestions">Suggestions</label><br>    
-                    </div>
-                    <div>
-                        <input type="radio" id="questions" name="feedback" value="questions">
-                        <label for="questions">Questions</label>    
-                    </div>
-                </div>
-                <br>
-                <div>
-                    <p style="text-align: left;">Describe your feedback: </p>
-                    <input type="text" class="form-control custom-input" id="description" placeholder="Enter feedback" style="height: 300px;">
-                </div>
-                <div class="form-group">
-                    <input type="text" class="form-control custom-input" id="name" placeholder="Enter Your Name">
-                </div>
-                <div class="form-group">
-                    <input type="email" class="form-control custom-input" id="email" placeholder="Enter Your Email">
-                </div>
-                <div class="button-container">
-                    <button type="submit" class="btn btn1" style="width: 300px;">Submit</button>
-                </div>
             </form>
         </div>
 
@@ -365,7 +440,7 @@
         </div>
 
         <div class="logo-container">
-            <img src="./images/logo.png" alt="logo" style="width: 8%;padding-bottom: 8vw;padding-top: 5vw;">
+            <img src="./images/logo.png" alt="logo" style="width:8%;padding-bottom: 8vw;padding-top: 5vw;">
          </div>
 
 
@@ -375,6 +450,19 @@
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
     AOS.init();
+
+    //For unselecting other time slots when one is selected
+    function toggleTimeSlot(timeSlot) {
+    var timeSlots = document.querySelectorAll('.time-slot');
+    
+    // Remove 'selected' class from all time slots
+    timeSlots.forEach(function(slot) {
+        slot.classList.remove('selected');
+    });
+
+    // Add 'selected' class to the clicked time slot
+    timeSlot.classList.add('selected');
+}
     </script>
 
     </body>
